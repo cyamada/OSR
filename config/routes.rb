@@ -1,5 +1,4 @@
 Osr::Application.routes.draw do
-  root :to => 'static_pages/index'
   get "static_pages/index"
   get "static_pages/contact"
 
