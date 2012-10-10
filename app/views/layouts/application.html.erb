@@ -1,14 +1,52 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Osr</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<head>
+		<title><%= full_title(yield(:title)) %></title>
+	    <%= stylesheet_link_tag    "application", :media => "all" %>
+	    <%= javascript_include_tag "application" %>
+	    <%= csrf_meta_tags %>
+	</head>
+	<body>
 
-<%= yield %>
+		<div class="outer">
+		<div class="wrapper">
+			<div class="logo">
+				<%= link_to "sample app", '#', id: "logo" %>
+			</div>	<!-- end logo -->
 
-</body>
+			<div class="top-nav">
+				<ul>
+					<li><%= link_to "About", '#' %></li>
+					<li><%= link_to "Contact", '#' %></li>
+					<li><%= link_to "Donate", '#' %></li>
+					<li><%= link_to "FAQ", '#' %></li>
+				</ul>
+			</div> <!-- end top-nav -->
+
+			<div class="left-nav">
+				<ul>
+					<!-- classes go here -->
+				</ul>
+			</div> <!-- end left-nav -->
+
+			<div class="right-nav">
+				<ul>
+					<li><%= link_to "About", '#' %></li>
+					<li><%= link_to "Contact", '#' %></li>
+					<li><%= link_to "Donate", '#' %></li>
+					<li><%= link_to "FAQ", '#' %></li>
+				</ul>
+			</div> <!-- end right-nav -->
+
+			<div class="content" class="annoucement">
+
+			</div> <!-- end content, annoucement -->
+
+			<div class="footer">
+				<p class="footer-text">&copy; 2012 Connor Yamada</p>
+			</div> <!-- end footer -->
+
+	<%= yield %>
+
+	</body>
 </html>
