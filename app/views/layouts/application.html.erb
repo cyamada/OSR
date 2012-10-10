@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+	<html>
 	<head>
 		<title><%= full_title(yield(:title)) %></title>
-	    <%= stylesheet_link_tag    "application", :media => "all" %>
+	    <%= stylesheet_link_tag    "application", media: "all" %>
 	    <%= javascript_include_tag "application" %>
 	    <%= csrf_meta_tags %>
 	</head>
@@ -10,32 +10,21 @@
 
 		<div class="outer">
 		<div class="wrapper">
+
 			<div class="logo">
-				<%= link_to "sample app", '#', id: "logo" %>
-			</div>	<!-- end logo -->
+			<%= link_to "sample app", '#', id: "logo" %>
+			</div> <!-- end logo -->
 
 			<div class="top-nav">
-				<ul>
-					<li><%= link_to "About", '#' %></li>
-					<li><%= link_to "Contact", '#' %></li>
-					<li><%= link_to "Donate", '#' %></li>
-					<li><%= link_to "FAQ", '#' %></li>
-				</ul>
+				<%= render 'layouts/top-nav' %>
 			</div> <!-- end top-nav -->
 
 			<div class="left-nav">
-				<ul>
-					<!-- classes go here -->
-				</ul>
+				<%= render 'layouts/left-nav' %>
 			</div> <!-- end left-nav -->
 
 			<div class="right-nav">
-				<ul>
-					<li><%= link_to "About", '#' %></li>
-					<li><%= link_to "Contact", '#' %></li>
-					<li><%= link_to "Donate", '#' %></li>
-					<li><%= link_to "FAQ", '#' %></li>
-				</ul>
+				<%= render 'layouts/right-nav' %>
 			</div> <!-- end right-nav -->
 
 			<div class="content" class="annoucement">
@@ -43,10 +32,13 @@
 			</div> <!-- end content, annoucement -->
 
 			<div class="footer">
-				<p class="footer-text">&copy; 2012 Connor Yamada</p>
+				<%= render 'layouts/footer' %>
 			</div> <!-- end footer -->
 
 	<%= yield %>
+		</div> <!-- end wrapper -->
+		</div> <!-- end outer -->
+
 
 	</body>
-</html>
+	</html>

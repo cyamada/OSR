@@ -1,22 +1,34 @@
 require 'spec_helper'
 
 describe "StaticPages" do
-  describe "index page" do
-    it "should have the title 'UVMSR | index'" do
-      visit '/static_pages/index'
-      page.should have_content('UVMSR | index')
-    end
 
-    it "should not have a custom page title" do
-      visit '/static_pages/index'
-      page.should_not have_selector('title', :text => '| index')
-    end
+  subject { page }
+
+  describe "index page" do
+    before { visit root_path }
+
+    it { page.should have_selector('title', text: full_title('')) }
+    it { page.should_not have_selector('title', text: '| index') }
+
   end
 
   describe "Contact page" do
-    it "should have the title 'UVMSR | Contact Us'" do
-      visit '/static_pages/contact'
-      page.should have_content('UVMSR | Contact Us')
-    end
+    before { visit contact_path }
+
+    it { page.should have_selector('title', text: full_title('Contact')) }
+
+  end
+
+  describe "About page" do
+    before { visit about_path }
+
+    it { page.should have_selector('title', text: full_title('About')) }
+
+  end
+
+  describe "Donate page" do
+    before { visit donate_path }
+
+    it { page.should have_selector('title', text: full_title('Donate')) }
   end
 end

@@ -1,6 +1,10 @@
 Osr::Application.routes.draw do
-  get "static_pages/index"
-  get "static_pages/contact"
+  root :to => 'static_pages#index'
+
+  match '/contact',  to: 'static_pages#contact'
+  match '/about',  to: 'static_pages#about'
+  match '/donate', to: 'static_pages#donate'
+
 
   resources :reviews
 

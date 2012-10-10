@@ -80,9 +80,9 @@ a:hover			{ color: #f00; }
 
 /* Containers */
 
-.outer				{ margin:30px 30px auto; background-color:#FFF; }
+.outer				{ margin:auto; background-color:#E6E6E6; }
 
-.wrapper			{ margin:0 auto; background-color:#FFF; max-width:1300px;  }
+.wrapper			{ margin:0 auto; background-color:#E6E6E6; max-width:1300px;  }
 
 .logo				{ float:left; margin-bottom:9px;	}
 
@@ -116,9 +116,9 @@ a:hover			{ color: #f00; }
 	margin-top:5px;
 	margin-bottom:20px;
 	margin-left:20px;
-	width:200px;
+	width:180px;
 	float:left;	
-	background-color:#FF0;
+	background-color:#090;
 	-moz-border-radius:10px;
 	-moz-box-shadow:2px 2px 5px #999;
 	-webkit-border-radius:20px;
@@ -129,9 +129,10 @@ a:hover			{ color: #f00; }
 }
 
 .left-nav ul li {
+	color: #000;
 	font-family:Arial, Helvetica, sans-serif;
-	font-size:16px;
-	margin-top:2px;	
+	font-size:11px;
+	margin-top:1px;	
 }
 
 .right-nav { 
