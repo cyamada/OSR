@@ -11,20 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121008001216) do
+ActiveRecord::Schema.define(:version => 20121011154356) do
 
   create_table "reviews", :force => true do |t|
+    t.integer  "professor_id"
+    t.integer  "review_id"
+    t.string   "professor_name"
     t.text     "content"
     t.string   "user_ip"
-    t.integer  "teacher_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "users", :force => true do |t|
-    t.string   "ip"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "workload"
+    t.string   "attendance"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
 end
